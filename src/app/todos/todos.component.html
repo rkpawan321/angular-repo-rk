@@ -1,0 +1,9 @@
+<p>todos works!</p>
+
+<p *ngIf="todoItems().length === 0">No todos available.</p>
+<ul>
+  <li *ngFor="let todo of todoItems()">
+    <input type="checkbox" [checked]="todo.completed" disabled />
+    {{ todo.title }}
+  </li>
+</ul>
